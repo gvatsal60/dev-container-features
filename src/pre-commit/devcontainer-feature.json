@@ -1,20 +1,20 @@
 {
-    "id": "pre-commit",
-    "name": "pre-commit(via pip or npm or yarn)",
-    "version": "1.0.0",
-    "documentationURL": "http://github.com/gvatsal60/dev-container-features/tree/HEAD/src/pre-commit",
-    "description": "The Pre-commit extension for VS Code's DevContainer feature automates pre-commit checks within a consistent, isolated environment. It ensures every commit meets project standards by running configurable checks before changes are committed, enhancing workflow efficiency and code quality.",
-    "options": {
-        "version": {
-            "default": "latest",
-            "description": "Select the version of Pre-Commit to install.",
-            "proposals": [
-                "latest"
-            ],
-            "type": "string"
-        }
-    },
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/python"
-    ]
+  "id": "pre-commit",
+  "name": "pre-commit(via pip or npm or yarn)",
+  "version": "1.0.0",
+  "documentationURL": "http://github.com/gvatsal60/dev-container-features/tree/HEAD/src/pre-commit",
+  "description": "The Pre-commit extension for VS Code's DevContainer feature automates pre-commit checks within a consistent, isolated environment. It ensures every commit meets project standards by running configurable checks before changes are committed, enhancing workflow efficiency and code quality.",
+  "options": {
+    "version": {
+      "default": "latest",
+      "description": "Select the version of Pre-Commit to install.",
+      "proposals": [
+        "latest"
+      ],
+      "type": "string"
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/python"
+  ]
 }
