@@ -4,7 +4,7 @@ on:
     inputs:
       run_tests:
         type: boolean
-        description: 'run tests'
+        description: "run tests"
         default: true
 
 jobs:
@@ -27,6 +27,6 @@ jobs:
           publish-features: "true"
           base-path-to-features: "./src"
           generate-docs: "false"
-          
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
