@@ -55,5 +55,10 @@
   "runArgs": [
     "--rm",
     "--name=vsc-${localEnv:USER}-${containerWorkspaceFolderBasename}-${devcontainerId}"
-  ]
+  ],
+  "features": {
+    "ghcr.io/gvatsal60/dev-container-features/pre-commit" : {
+      "version" :  "latest"
+    }
+  }
 }
