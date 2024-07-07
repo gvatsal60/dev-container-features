@@ -1,0 +1,42 @@
+{
+  "Print Pointer Address": {
+    "scope": "h, hpp, h++, c, c++, cpp",
+    "prefix": "plog",
+    "body": [
+      "printf(\"%s:%d $1: %p\\n\", \"$TM_FILENAME\", __LINE__, $1); $LINE_COMMENT REMOVE"
+    ],
+    "description": "Prints pointer address to console"
+  },
+  "Print Hex Value": {
+    "scope": "h, hpp, h++, c, c++, cpp",
+    "prefix": "hlog",
+    "body": [
+      "printf(\"%s:%d $1: 0x%02x\\n\", \"$TM_FILENAME\", __LINE__, $1); $LINE_COMMENT REMOVE"
+    ],
+    "description": "Print hex value to console"
+  },
+  "Print String Value": {
+    "scope": "h, hpp, h++, c, c++, cpp",
+    "prefix": "slog",
+    "body": [
+      "printf(\"%s:%d $1: %s\\n\", \"$TM_FILENAME\", __LINE__, $1); $LINE_COMMENT REMOVE"
+    ],
+    "description": "Print string value to console"
+  },
+  "Print FunctionName": {
+    "scope": "h, hpp, h++, c, c++, cpp",
+    "prefix": "log0",
+    "body": [
+      "printf(\"%s:%d %s $1\\n\", \"$TM_FILENAME\", __LINE__, __FUNCTION__); $LINE_COMMENT REMOVE"
+    ],
+    "description": "Print filename with linenumber to console"
+  },
+  "Print Integer Values": {
+    "scope": "h, hpp, h++, c, c++, cpp",
+    "prefix": "log1",
+    "body": [
+      "printf(\"%s:%d $1: %d\\n\", \"$TM_FILENAME\", __LINE__, $1); $LINE_COMMENT REMOVE"
+    ],
+    "description": "Print values to console"
+  }
+}
