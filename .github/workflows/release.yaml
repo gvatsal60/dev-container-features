@@ -6,27 +6,23 @@ on:
         type: boolean
         description: 'run tests'
         default: true
-
 jobs:
   run-tests:
     uses: ./.github/workflows/test.yaml
     secrets: inherit
     with:
       enabled: ${{ inputs.run_tests }}
-
   deploy:
     needs: [run-tests]
     if: ${{ github.ref == 'refs/heads/master' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: "Publish Features"
         uses: devcontainers/action@v1
         with:
           publish-features: "true"
           base-path-to-features: "./src"
           generate-docs: "false"
-          
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
