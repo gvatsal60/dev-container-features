@@ -1,5 +1,4 @@
 name: "DevContainer Features - Release"
-
 on:
   workflow_dispatch:
     inputs:
@@ -10,7 +9,6 @@ on:
   push:
     branches:
       - master
-
 jobs:
   run-tests:
     uses: ./.github/workflows/test.yaml

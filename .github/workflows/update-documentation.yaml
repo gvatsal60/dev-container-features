@@ -4,7 +4,6 @@ on:
     branches:
       - master
   workflow_dispatch:
-
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -15,13 +14,11 @@ jobs:
     if: "github.ref == 'refs/heads/master'"
     steps:
       - uses: actions/checkout@v4
-
       - name: Generate Documentation
         uses: devcontainers/action@v1
         with:
           generate-docs: "true"
           base-path-to-features: "./src"
-
       - name: Create a PR for Documentation
         id: push_image_info
         env:
