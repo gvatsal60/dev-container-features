@@ -6,6 +6,9 @@ on:
         type: boolean
         description: "run tests"
         default: true
+  push:
+    branches:
+      - master
 jobs:
   run-tests:
     uses: ./.github/workflows/test.yaml
