@@ -1,5 +1,4 @@
 name: "DevContainer Features - Release"
-
 on:
   workflow_dispatch:
     inputs:
