@@ -27,8 +27,8 @@
 
 set -e
 
-# shellcheck disable=SC1091
-. dev-container-features-test-lib # FIXME
+# shellcheck source=/dev/null
+. dev-container-features-test-lib
 
 check "pre-commit --version" pre-commit --version
 

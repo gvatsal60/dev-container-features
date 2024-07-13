@@ -20,18 +20,19 @@ Make sure you have the following installed:
 
 ## Getting Started
 
+Add this to your `devcontainer.json`
+
 See also: https://github.com/pre-commit/pre-commit
-
-### Using pre-commit-hooks with pre-commit
-
-Add this to your `.pre-commit-config.yaml`
-
-```yaml
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0  # Use the ref you want to point at
-    hooks:
-      - id: trailing-whitespace
+```json
+"features": {
+    "ghcr.io/gvatsal60/dev-container-features/pre-commit:1": {}
+}
 ```
+## Options
+
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+| version | Select the version of Pre-Commit to install. | string | latest |
 
 ## Contributing
 
