@@ -4,7 +4,7 @@ All notable changes to [Project Name] will be documented in this file.
 
 ## [Unreleased]
 
-## [1.0.0] - YYYY-MM-DD
+## [1.0.2] - 2024-Jul-DD
 
 - Initial release
 
