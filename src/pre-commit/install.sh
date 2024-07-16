@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ##########################################################################################
-# File: install
+# File: install.sh
 # Author: Vatsal Gupta
 # Date: 09-Jul-2024
 # Description: Installation script for pre-commit as vscode feature
@@ -27,13 +27,18 @@
 
 # Check if pip3 command is available
 if command -v "pip3" >/dev/null 2>&1; then
+    # Upgrade pip to the latest version
+    pip install --upgrade pip
+
     # Install pre-commit using pip3
     pip3 install pre-commit
 
     # Check if .pre-commit-config.yaml file exists
     if [ -f .pre-commit-config.yaml ]; then
         # If .pre-commit-config.yaml exists, run pre-commit install
+        pre-commit autoupdate
         pre-commit install
+        pre-commit run --all-files
     else
         # If .pre-commit-config.yaml does not exist, print a warning message
         echo ".pre-commit-config.yaml file not found. Skipping pre-commit installation."

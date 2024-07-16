@@ -1,0 +1,8 @@
+{
+  "pre-commit_test": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "pre-commit": {}
+    }
+  }
+}
