@@ -1,19 +1,9 @@
 {
   "id": "pre-commit",
   "name": "pre-commit(via pip3)",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "documentationURL": "http://github.com/gvatsal60/dev-container-features/tree/HEAD/src/pre-commit",
   "description": "The pre-commit hooks as VSCode's DevContainer feature automates pre-commit checks within a consistent, isolated environment. It ensures every commit meets project standards by running configurable checks before changes are committed, enhancing workflow efficiency and code quality.",
-  "options": {
-    "version": {
-      "default": "latest",
-      "description": "Select the version of pre-commit to install.",
-      "proposals": [
-        "latest"
-      ],
-      "type": "string"
-    }
-  },
   "installsAfter": [
     "ghcr.io/devcontainers/features/python"
   ]

@@ -25,13 +25,13 @@
 # Main Script
 ##########################################################################################
 
-# Check if pip3 command is available
-if command -v "pip3" >/dev/null 2>&1; then
+# Check if pip command is available
+if command -v pip >/dev/null 2>&1; then
     # Upgrade pip to the latest version
     pip install --upgrade pip
 
-    # Install pre-commit using pip3
-    pip3 install pre-commit
+    # Install pre-commit using pip
+    pip install pre-commit
 
     # Check if .pre-commit-config.yaml file exists
     if [ -f .pre-commit-config.yaml ]; then
