@@ -1,14 +1,15 @@
 name: "DevContainer Features - Release"
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
     inputs:
       run_tests:
         type: boolean
-        description: "run tests"
+        description: "Run tests"
         default: true
-  push:
-    branches:
-      - master
+
 jobs:
   run-tests:
     uses: ./.github/workflows/test.yaml
@@ -17,11 +18,13 @@ jobs:
       enabled: ${{ inputs.run_tests }}
   deploy:
     needs: [run-tests]
-    if: ${{ github.ref == 'refs/heads/master' }}
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: "Publish Features"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Publish Features
         uses: devcontainers/action@v1
         with:
           publish-features: "true"
