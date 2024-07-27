@@ -4,5 +4,11 @@
     "features": {
       "pre-commit": {}
     }
+  },
+  "sonarlint_test": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "sonarlint": {}
+    }
   }
 }
