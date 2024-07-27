@@ -1,7 +1,7 @@
 
-# pre-commit(via pip or npm or yarn) (pre-commit)
+# pre-commit(via pip) (pre-commit)
 
-The Pre-commit extension for VS Code's DevContainer feature automates pre-commit checks within a consistent, isolated environment. It ensures every commit meets project standards by running configurable checks before changes are committed, enhancing workflow efficiency and code quality.
+The pre-commit hooks as VSCode's DevContainer feature automates pre-commit checks within a consistent, isolated environment. It ensures every commit meets project standards by running configurable checks before changes are committed, enhancing workflow efficiency and code quality.
 
 ## Example Usage
 
@@ -11,11 +11,7 @@ The Pre-commit extension for VS Code's DevContainer feature automates pre-commit
 }
 ```
 
-## Options
 
-| Options Id | Description | Type | Default Value |
-|-----|-----|-----|-----|
-| version | Select the version of Pre-Commit to install. | string | latest |
 
 
 
