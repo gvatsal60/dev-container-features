@@ -1,4 +1,4 @@
-# dev-container-features [NOT WORKING !!!]
+# dev-container-features
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://img.shields.io/github/license/gvatsal60/dev-container-features)
 [![build status](https://github.com/gvatsal60/dev-container-features/actions/workflows/readme-checker.yaml/badge.svg)](https://github.com/gvatsal60/dev-container-features/actions/workflows/readme-checker.yaml)
@@ -22,17 +22,23 @@ Make sure you have the following installed:
 
 Add this to your `devcontainer.json`
 
-See also: https://github.com/pre-commit/pre-commit
+### pre-commit (via pip)
+
+See also: <https://github.com/pre-commit/pre-commit>
+
 ```json
 "features": {
-    "ghcr.io/gvatsal60/dev-container-features/pre-commit:1": {}
+    "ghcr.io/gvatsal60/dev-container-features/pre-commit": {}
 }
 ```
-## Options
 
-| Options Id | Description | Type | Default Value |
-|-----|-----|-----|-----|
-| version | Select the version of Pre-Commit to install. | string | latest |
+### sonarlint
+
+```json
+"features": {
+    "ghcr.io/gvatsal60/dev-container-features/sonarlint": {}
+}
+```
 
 ## Contributing
 
