@@ -9,15 +9,16 @@ on:
         type: boolean
         description: "Run tests"
         default: true
+
 jobs:
   run-tests:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_tests == true || github.event_name == 'push' }}
     uses: ./.github/workflows/test.yaml
     secrets: inherit
-    with:
-      enabled: ${{ inputs.run_tests }}
+
   deploy:
     needs: [run-tests]
-    if: github.ref == 'refs/heads/master'
+    if: needs.run-tests.result == 'success' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
