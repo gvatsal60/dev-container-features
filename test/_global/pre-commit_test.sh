@@ -4,7 +4,7 @@
 # File: pre-commit_test.sh
 # Author: Vatsal Gupta
 # Date: 27-Jul-2024
-# Description: 
+# Description:
 # The 'test/_global' folder is a special test folder that is not tied to a single feature.
 #
 # This test file is executed against a running container constructed

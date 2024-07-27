@@ -9,7 +9,6 @@ on:
         type: boolean
         description: "Run tests"
         default: true
-
 jobs:
   run-tests:
     uses: ./.github/workflows/test.yaml
@@ -23,7 +22,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Publish Features
         uses: devcontainers/action@v1
         with:
