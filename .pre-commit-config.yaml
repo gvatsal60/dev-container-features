@@ -52,7 +52,7 @@ repos:
       - id: eslint
   # Runs mypy to check Python type annotations.
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: "v1.11.0"
+    rev: "v1.11.1"
     hooks:
       - id: mypy
   # Lints SCSS files to enforce style and best practices.
@@ -120,7 +120,7 @@ repos:
       - id: sqlfluff-fix
   # RuboCop for linting Ruby files
   - repo: https://github.com/rubocop/rubocop
-    rev: "v1.65.0"
+    rev: "v1.65.1"
     hooks:
       - id: rubocop
   # Terraform-py for formatting and validating Terraform files
