@@ -11,8 +11,7 @@
         "DavidAnson.vscode-markdownlint",
         "MindpathTechnologyLimited.code-error-lens",
         "gurumukhi.selected-lines-count",
-        "bradzacher.vscode-copy-filename",
-        "PKief.material-icon-theme"
+        "bradzacher.vscode-copy-filename"
       ],
       "settings": {
         "editor.bracketPairColorization.enabled": true,
@@ -20,12 +19,16 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.detectIndentation": false,
         "editor.insertSpaces": true,
+        "editor.snippetSuggestions": "top",
         "editor.tabCompletion": "on",
         "editor.tabSize": 2,
         "editor.trimAutoWhitespace": true,
         "explorer.confirmDelete": false,
         "extensions.autoUpdate": true,
         "extensions.ignoreRecommendations": true,
+        "files.associations": {
+          "*.code-snippets": "jsonc"
+        },
         "files.autoSave": "afterDelay",
         "files.eol": "auto",
         "files.exclude": {
@@ -39,16 +42,15 @@
           "**/node_modules": true
         },
         "windows.title": "${folderPath}",
-        "workbench.iconTheme": "material-icon-theme",
         "workbench.startupEditor": "none"
       }
     }
   },
-  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "image": "mcr.microsoft.com/devcontainers/base:alpine",
   "mounts": [
-    "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind"
+    "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached"
   ],
-  "postCreateCommand": "curl -fsSL https://raw.githubusercontent.com/gvatsal60/Linux-Aliases/HEAD/install.sh | sh",
+  "postCreateCommand": "chmod +x ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh && ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh",
   "runArgs": [
     "--rm",
     "--name=vsc-${localEnv:USER}-${containerWorkspaceFolderBasename}-${devcontainerId}"

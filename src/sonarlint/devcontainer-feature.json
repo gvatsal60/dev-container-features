@@ -1,9 +1,4 @@
 {
-  "id": "sonarlint",
-  "version": "1.0.1",
-  "name": "SonarLint",
-  "documentationURL": "http://github.com/gvatsal60/dev-container-features/tree/HEAD/src/sonarlint",
-  "description": "SonarLint is a devcontainer feature that enables real-time feedback on code quality and potential issues. When enabled, it actively analyzes your code inside the development container, providing instant notifications and suggestions to help maintain high standards and catch problems early. This feature streamlines the development process by integrating continuous feedback directly into your workflow, making it easier to spot and address issues as you code.",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -14,5 +9,10 @@
   },
   "dependsOn": {
     "ghcr.io/devcontainers/features/node": {}
-  }
+  },
+  "description": "SonarLint is a devcontainer feature that enables real-time feedback on code quality and potential issues. When enabled, it actively analyzes your code inside the development container, providing instant notifications and suggestions to help maintain high standards and catch problems early. This feature streamlines the development process by integrating continuous feedback directly into your workflow, making it easier to spot and address issues as you code.",
+  "documentationURL": "http://github.com/gvatsal60/dev-container-features/tree/HEAD/src/sonarlint",
+  "id": "sonarlint",
+  "name": "SonarLint",
+  "version": "1.0.1"
 }

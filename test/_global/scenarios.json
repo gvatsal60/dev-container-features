@@ -1,14 +1,14 @@
 {
   "pre-commit_test": {
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
       "pre-commit": {}
-    }
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
   },
   "sonarlint_test": {
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
       "sonarlint": {}
-    }
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
   }
 }

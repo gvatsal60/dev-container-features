@@ -32,49 +32,9 @@ repos:
       - id: mixed-line-ending
       - id: name-tests-test
       - id: pretty-format-json
-        args: [--autofix, --no-ensure-ascii, --no-sort-keys]
+        args: [--autofix]
       - id: requirements-txt-fixer
       - id: trailing-whitespace
-  # Uses pygrep to enforce Python type annotations.
-  - repo: https://github.com/pre-commit/pygrep-hooks
-    rev: "v1.10.0"
-    hooks:
-      - id: python-use-type-annotations
-  # Clang-format for formatting C, C++, and JavaScript files
-  - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: "v18.1.8"
-    hooks:
-      - id: clang-format
-  # ESLint for linting JavaScript and TypeScript files
-  - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: "v9.8.0"
-    hooks:
-      - id: eslint
-  # Runs mypy to check Python type annotations.
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: "v1.11.1"
-    hooks:
-      - id: mypy
-  # Lints SCSS files to enforce style and best practices.
-  - repo: https://github.com/pre-commit/mirrors-scss-lint
-    rev: "v0.60.0"
-    hooks:
-      - id: scss-lint
-  # Runs JSHint to analyze JavaScript code for potential errors.
-  - repo: https://github.com/pre-commit/mirrors-jshint
-    rev: "v2.13.6"
-    hooks:
-      - id: jshint
-  # Uses fixmyjs to automatically fix simple JavaScript issues.
-  - repo: https://github.com/pre-commit/mirrors-fixmyjs
-    rev: "v2.0.0"
-    hooks:
-      - id: fixmyjs
-  # Runs CSSLint to check CSS files for errors and stylistic issues.
-  - repo: https://github.com/pre-commit/mirrors-csslint
-    rev: "v1.0.5"
-    hooks:
-      - id: csslint
   # ShellCheck hook for linting shell scripts
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: "v0.10.0.1"
@@ -112,23 +72,6 @@ repos:
     rev: "0.2.2"
     hooks:
       - id: checkmake
-  # SQLFluff for linting and fixing SQL files
-  - repo: https://github.com/sqlfluff/sqlfluff
-    rev: "3.1.0"
-    hooks:
-      - id: sqlfluff-lint
-      - id: sqlfluff-fix
-  # RuboCop for linting Ruby files
-  - repo: https://github.com/rubocop/rubocop
-    rev: "v1.65.1"
-    hooks:
-      - id: rubocop
-  # Terraform-py for formatting and validating Terraform files
-  - repo: https://github.com/AleksaC/terraform-py
-    rev: "v1.9.3"
-    hooks:
-      - id: tf-fmt
-      - id: tf-validate
   # Gitleaks for detecting secrets in Git repositories
   - repo: https://github.com/gitleaks/gitleaks
     rev: "v8.18.4"
