@@ -1,6 +1,8 @@
 # dev-container-features
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://img.shields.io/github/license/gvatsal60/dev-container-features)
+[![DevContainer Features - Release](https://github.com/gvatsal60/dev-container-features/actions/workflows/release.yaml/badge.svg)](https://github.com/gvatsal60/dev-container-features/actions/workflows/release.yaml)
+[![DevContainer Features - Test](https://github.com/gvatsal60/dev-container-features/actions/workflows/test.yaml/badge.svg)](https://github.com/gvatsal60/dev-container-features/actions/workflows/test.yaml)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/gvatsal60/dev-container-features/master.svg)](https://results.pre-commit.ci/latest/github/gvatsal60/dev-container-features/HEAD)
 ![GitHub pull-requests](https://img.shields.io/github/issues-pr/gvatsal60/dev-container-features)
 ![GitHub Issues](https://img.shields.io/github/issues/gvatsal60/dev-container-features)
