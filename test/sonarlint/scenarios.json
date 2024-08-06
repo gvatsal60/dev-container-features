@@ -1,8 +1,8 @@
 {
   "test": {
-    "image": "ubuntu:focal",
     "features": {
       "sonarlint": {}
-    }
+    },
+    "image": "ubuntu:focal"
   }
 }
