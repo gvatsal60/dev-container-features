@@ -27,7 +27,7 @@
         "extensions.autoUpdate": true,
         "extensions.ignoreRecommendations": true,
         "files.associations": {
-          "*.snippet": "jsonc"
+          "*.code-snippets": "jsonc"
         },
         "files.autoSave": "afterDelay",
         "files.eol": "auto",
