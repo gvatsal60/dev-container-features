@@ -9,7 +9,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/gvatsal60/dev-container-features)
 ![GitHub stars](https://img.shields.io/github/stars/gvatsal60/dev-container-features)
 
-This repository demonstrates setting up a pre-commit hook in Visual Studio Code (VS Code) development container.
+This repository demonstrates setting up devcontainer-features in Visual Studio Code (VS Code) development container.
 
 ## Prerequisites
 
