@@ -32,8 +32,10 @@ if command -v python3 >/dev/null 2>&1; then
         # Upgrade pip to the latest version
         python3 -m pip install --upgrade pip
 
-        # Install pre-commit using pip
-        python3 -m pip install pre-commit
+        # Install the pre-commit package using pip.
+        # The --break-system-packages option allows pip to install packages
+        # as it won't interfere with system packages.
+        python3 -m pip install pre-commit --break-system-packages
     else
         # If pre-commit is not available after installation, print an error message
         echo "pip not available installation unsuccessful, aborted!!!"

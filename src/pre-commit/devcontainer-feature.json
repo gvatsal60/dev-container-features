@@ -6,5 +6,5 @@
   "documentationURL": "http://github.com/gvatsal60/dev-container-features/tree/HEAD/src/pre-commit",
   "id": "pre-commit",
   "name": "pre-commit(via pip)",
-  "version": "1.0.5"
+  "version": "1.0.6"
 }
