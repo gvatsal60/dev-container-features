@@ -5,13 +5,14 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "streetsidesoftware.code-spell-checker",
-        "esbenp.prettier-vscode",
-        "Gruntfuggly.todo-tree",
         "DavidAnson.vscode-markdownlint",
-        "MindpathTechnologyLimited.code-error-lens",
+        "Gruntfuggly.todo-tree",
+        "Tyriar.sort-lines",
+        "bradzacher.vscode-copy-filename",
+        "esbenp.prettier-vscode",
         "gurumukhi.selected-lines-count",
-        "bradzacher.vscode-copy-filename"
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens"
       ],
       "settings": {
         "editor.bracketPairColorization.enabled": true,
@@ -46,9 +47,9 @@
       }
     }
   },
-  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "image": "mcr.microsoft.com/devcontainers/base:noble",
   "mounts": [
-    "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached,readonly"
+    "source=${containerWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached,readonly"
   ],
   "postCreateCommand": "chmod +x ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh && ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh",
   "runArgs": [
