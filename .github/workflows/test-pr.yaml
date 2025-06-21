@@ -1,4 +1,6 @@
 name: "PR - Test Updated Features"
+permissions:
+  contents: read
 on:
   pull_request:
 jobs:
