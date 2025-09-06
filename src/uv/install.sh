@@ -26,9 +26,9 @@ UV_GIT_URL="https://github.com/astral-sh/uv"
 
 # Check if curl command is available
 if command -v curl >/dev/null 2>&1; then
-    curl -LsSf ${UV_GIT_URL}/install.sh | sh
+    curl -LsSf "${UV_GIT_URL}"/install.sh | sh
 elif command -v wget >/dev/null 2>&1; then
-    wget -qO- ${UV_GIT_URL}/install.sh | sh
+    wget -qO- "${UV_GIT_URL}"/install.sh | sh
 elif command -v pipx >/dev/null 2>&1; then
     pipx install uv
 elif command -v pip >/dev/null 2>&1; then
@@ -40,7 +40,7 @@ elif command -v winget >/dev/null 2>&1; then
 elif command -v scoop >/dev/null 2>&1; then
     scoop install uv
 elif command -v cargo >/dev/null 2>&1; then
-    cargo install --git ${UV_GIT_URL} uv
+    cargo install --git "${UV_GIT_URL}" uv
 else
     echo "uv installation unsuccessful, aborted!!!"
     exit 1
