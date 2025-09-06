@@ -10,7 +10,9 @@
         "Tyriar.sort-lines",
         "bradzacher.vscode-copy-filename",
         "esbenp.prettier-vscode",
+        "foxundermoon.shell-format",
         "gurumukhi.selected-lines-count",
+        "mads-hartmann.bash-ide-vscode",
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens"
       ],
