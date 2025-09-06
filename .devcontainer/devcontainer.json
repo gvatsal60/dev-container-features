@@ -1,5 +1,7 @@
 {
-  "capAdd": ["SYS_PTRACE"],
+  "capAdd": [
+    "SYS_PTRACE"
+  ],
   "customizations": {
     "vscode": {
       "extensions": [
