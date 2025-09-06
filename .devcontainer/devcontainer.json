@@ -10,11 +10,18 @@
         "Tyriar.sort-lines",
         "bradzacher.vscode-copy-filename",
         "esbenp.prettier-vscode",
+        "foxundermoon.shell-format",
         "gurumukhi.selected-lines-count",
+        "mads-hartmann.bash-ide-vscode",
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens"
       ],
       "settings": {
+        "[shellscript]": {
+          "editor.defaultFormatter": "foxundermoon.shell-format",
+          "editor.tabSize": 4,
+          "files.eol": "\n"
+        },
         "editor.bracketPairColorization.enabled": true,
         "editor.comments.insertSpace": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -25,7 +32,6 @@
         "editor.tabSize": 2,
         "editor.trimAutoWhitespace": true,
         "explorer.confirmDelete": false,
-        "extensions.autoUpdate": true,
         "extensions.ignoreRecommendations": true,
         "files.associations": {
           "*.code-snippets": "jsonc"
@@ -42,7 +48,6 @@
           "**/bower_components": true,
           "**/node_modules": true
         },
-        "windows.title": "${folderPath}",
         "workbench.startupEditor": "none"
       }
     }

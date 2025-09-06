@@ -3,8 +3,8 @@
 ##########################################################################################
 # File: install.sh
 # Author: Vatsal Gupta
-# Date: 26-Jul-2024
-# Description: Installation script for `sonarlint` as devcontainer feature
+# Date: 06-Sept-2025
+# Description: Installation script for `uv` as devcontainer feature
 ##########################################################################################
 
 ##########################################################################################
@@ -15,7 +15,7 @@
 ##########################################################################################
 # Constants
 ##########################################################################################
-
+UV_GIT_URL="https://github.com/astral-sh/uv"
 ##########################################################################################
 # Functions
 ##########################################################################################
@@ -24,4 +24,24 @@
 # Main Script
 ##########################################################################################
 
-echo "SonarLint has been installed."
+# Check if curl command is available
+if command -v curl >/dev/null 2>&1; then
+    curl -LsSf "${UV_GIT_URL}"/install.sh | sh
+elif command -v wget >/dev/null 2>&1; then
+    wget -qO- "${UV_GIT_URL}"/install.sh | sh
+elif command -v pipx >/dev/null 2>&1; then
+    pipx install uv
+elif command -v pip >/dev/null 2>&1; then
+    python3 -m pip install uv
+elif command -v brew >/dev/null 2>&1; then
+    brew install uv
+elif command -v winget >/dev/null 2>&1; then
+    winget install --id=astral-sh.uv  -e
+elif command -v scoop >/dev/null 2>&1; then
+    scoop install uv
+elif command -v cargo >/dev/null 2>&1; then
+    cargo install --git "${UV_GIT_URL}" uv
+else
+    echo "uv installation unsuccessful, aborted!!!"
+    exit 1
+fi
