@@ -1,7 +1,5 @@
 {
-  "capAdd": [
-    "SYS_PTRACE"
-  ],
+  "capAdd": ["SYS_PTRACE"],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -17,6 +15,11 @@
         "usernamehw.errorlens"
       ],
       "settings": {
+        "[shellscript]": {
+          "editor.defaultFormatter": "foxundermoon.shell-format",
+          "editor.tabSize": 4,
+          "files.eol": "\n"
+        },
         "editor.bracketPairColorization.enabled": true,
         "editor.comments.insertSpace": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
