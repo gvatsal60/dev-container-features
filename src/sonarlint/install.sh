@@ -25,4 +25,3 @@
 ##########################################################################################
 
 echo "SonarLint has been installed. You can now use it to analyze your code for bugs and quality issues directly in your IDE."
-

@@ -1,7 +1,9 @@
 {
   "customizations": {
     "vscode": {
-      "extensions": ["charliermarsh.ruff"]
+      "extensions": [
+        "charliermarsh.ruff"
+      ]
     }
   },
   "description": "UV as a devcontainer feature that enables dependency management, virtual environments, and script execution. It offers a unified CLI that replaces tools like pip, poetry, pipx, and virtualenv, delivering lightning-fast installs and resolution. With support for reproducible lockfiles, workspace management, and Python version control, UV simplifies and accelerates the entire development workflow.",
