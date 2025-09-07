@@ -32,7 +32,7 @@ set -e
 . dev-container-features-test-lib
 
 # The 'check' command comes from the dev-container-features-test-lib.
-check "check uv version" sh -c "[ -x \"${HOME}/.local/bin/uv\" ] && \"${HOME}/.local/bin/uv\" --version || (command -v uv >/dev/null 2>&1 && uv --version) || { echo \"uv is not installed\"; exit 1; }"
+check "check uv version" sh -c "echo \"${HOME}\" && [ -x \"${HOME}/.local/bin/uv\" ] && \"${HOME}/.local/bin/uv\" --version || (command -v uv >/dev/null 2>&1 && uv --version) || { echo \"uv is not installed\"; exit 1; }"
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.
