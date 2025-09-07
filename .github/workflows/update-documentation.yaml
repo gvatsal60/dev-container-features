@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Generate Documentation
-        uses: devcontainers/action@v1
+        uses: devcontainers/action@1082abd5d2bf3a11abccba70eef98df068277772
         with:
           generate-docs: "true"
           base-path-to-features: "./src"

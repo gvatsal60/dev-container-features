@@ -25,7 +25,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
       - name: Publish Features
-        uses: devcontainers/action@v1
+        uses: devcontainers/action@1082abd5d2bf3a11abccba70eef98df068277772
         with:
           publish-features: "true"
           base-path-to-features: "./src"
