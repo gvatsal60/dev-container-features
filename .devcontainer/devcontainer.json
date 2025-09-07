@@ -8,12 +8,12 @@
         "DavidAnson.vscode-markdownlint",
         "Gruntfuggly.todo-tree",
         "Tyriar.sort-lines",
-        "bradzacher.vscode-copy-filename",
         "esbenp.prettier-vscode",
         "foxundermoon.shell-format",
         "gurumukhi.selected-lines-count",
         "mads-hartmann.bash-ide-vscode",
         "streetsidesoftware.code-spell-checker",
+        "timonwong.shellcheck",
         "usernamehw.errorlens"
       ],
       "settings": {
