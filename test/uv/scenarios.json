@@ -3,6 +3,6 @@
     "features": {
       "uv": {}
     },
-    "image": "mcr.microsoft.com/devcontainers/base"
+    "image": "mcr.microsoft.com/devcontainers/base:latest"
   }
 }
