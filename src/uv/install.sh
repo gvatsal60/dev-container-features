@@ -25,9 +25,14 @@ UV_GIT_URL="https://astral.sh/uv"
 # Main Script
 ##########################################################################################
 
+# FIXME
+echo "${HOME}"
+
 # Check if curl command is available
 if command -v curl >/dev/null 2>&1; then
+    echo "Before ${HOME}"
     curl -LsSf "${UV_GIT_URL}"/install.sh | sh
+    echo "After ${HOME}"
 elif command -v wget >/dev/null 2>&1; then
     wget -qO- "${UV_GIT_URL}"/install.sh | sh
 elif command -v pipx >/dev/null 2>&1; then
