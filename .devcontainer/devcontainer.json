@@ -6,6 +6,7 @@
     "vscode": {
       "extensions": [
         "DavidAnson.vscode-markdownlint",
+        "EditorConfig.EditorConfig",
         "Gruntfuggly.todo-tree",
         "Tyriar.sort-lines",
         "esbenp.prettier-vscode",
