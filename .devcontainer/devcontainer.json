@@ -17,6 +17,12 @@
         "usernamehw.errorlens"
       ],
       "settings": {
+        "[markdown]": {
+          "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+          "editor.rulers": [
+            80
+          ]
+        },
         "[shellscript]": {
           "editor.defaultFormatter": "foxundermoon.shell-format",
           "editor.tabSize": 4,

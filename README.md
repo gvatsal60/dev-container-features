@@ -1,9 +1,11 @@
 # dev-container-features
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://img.shields.io/github/license/gvatsal60/dev-container-features)
-[![DevContainer Features - Release](https://github.com/gvatsal60/dev-container-features/actions/workflows/release.yaml/badge.svg)](https://github.com/gvatsal60/dev-container-features/actions/workflows/release.yaml)
-[![DevContainer Features - Test](https://github.com/gvatsal60/dev-container-features/actions/workflows/test.yaml/badge.svg)](https://github.com/gvatsal60/dev-container-features/actions/workflows/test.yaml)
+[![Release](https://github.com/gvatsal60/dev-container-features/actions/workflows/release.yaml/badge.svg)](https://github.com/gvatsal60/dev-container-features/actions/workflows/release.yaml)
+[![Test](https://github.com/gvatsal60/dev-container-features/actions/workflows/test.yaml/badge.svg)](https://github.com/gvatsal60/dev-container-features/actions/workflows/test.yaml)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/gvatsal60/dev-container-features/master.svg)](https://results.pre-commit.ci/latest/github/gvatsal60/dev-container-features/HEAD)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/ca0e00113a7a48fda527e9b9e0121f83)](https://app.codacy.com/gh/gvatsal60/dev-container-features/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![CodeFactor](https://www.codefactor.io/repository/github/gvatsal60/dev-container-features/badge)](https://www.codefactor.io/repository/github/gvatsal60/dev-container-features)
 ![GitHub pull-requests](https://img.shields.io/github/issues-pr/gvatsal60/dev-container-features)
 ![GitHub Issues](https://img.shields.io/github/issues/gvatsal60/dev-container-features)
 ![GitHub forks](https://img.shields.io/github/forks/gvatsal60/dev-container-features)
