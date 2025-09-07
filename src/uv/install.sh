@@ -25,9 +25,6 @@ UV_GIT_URL="https://astral.sh/uv"
 # Main Script
 ##########################################################################################
 
-# FIXME
-echo "${HOME}"
-
 # Check if curl command is available
 if command -v curl >/dev/null 2>&1; then
     echo "Before ${HOME}"
