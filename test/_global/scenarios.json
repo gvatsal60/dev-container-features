@@ -10,5 +10,11 @@
       "sonarlint": {}
     },
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
+  },
+  "uv_test": {
+    "features": {
+      "uv": {}
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
   }
 }
