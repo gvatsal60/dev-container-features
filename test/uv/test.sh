@@ -32,7 +32,8 @@ set -e
 . dev-container-features-test-lib
 
 # The 'check' command comes from the dev-container-features-test-lib.
-check "uv --version" uv --version
+UV_PATH=$(command -v uv)
+check "uv --version" "${UV_PATH}" --version
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.

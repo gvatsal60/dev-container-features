@@ -33,7 +33,7 @@ elif command -v wget >/dev/null 2>&1; then
 elif command -v pipx >/dev/null 2>&1; then
     pipx install uv
 elif command -v pip >/dev/null 2>&1; then
-    python3 -m pip install uv
+    pip install uv
 elif command -v brew >/dev/null 2>&1; then
     brew install uv
 elif command -v winget >/dev/null 2>&1; then
