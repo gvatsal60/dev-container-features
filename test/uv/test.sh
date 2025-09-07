@@ -3,14 +3,15 @@
 ##########################################################################################
 # File: test
 # Author: Vatsal Gupta
-# Date: 26-Jul-2024
-# Description: Test script for `sonarlint` as devcontainer feature
+# Date: 07-Sept-2025
+# Description: Test script for `uv` as devcontainer feature
 ##########################################################################################
 
 ##########################################################################################
 # License
 ##########################################################################################
 # This script is licensed under the Apache 2.0 License.
+# License information should be updated as necessary.
 
 ##########################################################################################
 # Constants
@@ -31,7 +32,7 @@ set -e
 . dev-container-features-test-lib
 
 # The 'check' command comes from the dev-container-features-test-lib.
-check "node --version" node --version
+check "uv --version" uv --version
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.

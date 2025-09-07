@@ -4,7 +4,7 @@
 # File: test
 # Author: Vatsal Gupta
 # Date: 09-Jul-2024
-# Description: Test script for pre-commit as vscode feature
+# Description: Test script for `pre-commit` as devcontainer feature
 ##########################################################################################
 
 ##########################################################################################

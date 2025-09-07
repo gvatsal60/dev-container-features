@@ -1,0 +1,8 @@
+{
+  "test": {
+    "features": {
+      "uv": {}
+    },
+    "image": "mcr.microsoft.com/devcontainers/base"
+  }
+}
