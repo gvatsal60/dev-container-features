@@ -31,8 +31,11 @@ set -e
 # shellcheck source=/dev/null
 . dev-container-features-test-lib
 
+echo "-------- Printing UV PATH --------"
+which uv
+
 # shellcheck source=/dev/null
-. "${HOME}"/.local"${SHELL}"
+. "${HOME}"/.local/.bashrc
 
 # The 'check' command comes from the dev-container-features-test-lib.
 check "check uv version" uv --version
