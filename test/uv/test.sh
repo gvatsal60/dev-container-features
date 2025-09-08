@@ -32,7 +32,7 @@ set -e
 . dev-container-features-test-lib
 
 echo "-------- Printing UV PATH --------"
-which uv
+echo "$(which uv)"
 
 # shellcheck source=/dev/null
 . "${HOME}"/.local/.bashrc
