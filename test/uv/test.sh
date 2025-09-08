@@ -31,8 +31,10 @@ set -e
 # shellcheck source=/dev/null
 . dev-container-features-test-lib
 
+# shellcheck source=/dev/null
+. "${HOME}"/.local"${SHELL}"
+
 # The 'check' command comes from the dev-container-features-test-lib.
-export PATH="/root/.local/bin:${PATH}"
 check "check uv version" uv --version
 
 # Report result
