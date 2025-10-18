@@ -3,15 +3,6 @@ permissions:
   contents: read
 on:
   workflow_dispatch:
-    inputs:
-      on_changes_only:
-        type: boolean
-        description: "on_changes_only"
-        default: false
-      enabled:
-        type: boolean
-        description: "enabled"
-        default: true
   workflow_call:
     inputs:
       on_changes_only:
