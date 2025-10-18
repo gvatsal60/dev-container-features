@@ -7,14 +7,9 @@ on:
     branches:
       - master
   workflow_dispatch:
-    inputs:
-      run_tests:
-        type: boolean
-        description: "Run tests"
-        default: true
 jobs:
   run-tests:
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_tests == true || github.event_name == 'push' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
     uses: ./.github/workflows/test.yaml
     secrets: inherit
   deploy:
