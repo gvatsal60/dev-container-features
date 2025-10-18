@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 jobs:
   run-tests:
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_tests == true || github.event_name == 'push' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
     uses: ./.github/workflows/test.yaml
     secrets: inherit
   deploy:
