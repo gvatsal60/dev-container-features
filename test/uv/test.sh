@@ -34,11 +34,11 @@ set -e
 # The 'check' command comes from the dev-container-features-test-lib.
 check "check uv version"
 
-UV_PATH="${HOME}/.local/bin/uv"
+UV_ENV="${HOME}/.local/bin/env"
 
-if [ -x "${UV_PATH}" ]; then
+if [ -x "${UV_ENV}" ]; then
     # shellcheck source=/dev/null
-    . "${UV_PATH}"
+    . "${UV_ENV}"
     uv --version
 else
     echo "uv is not installed"
