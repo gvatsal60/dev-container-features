@@ -32,7 +32,18 @@ set -e
 . dev-container-features-test-lib
 
 # The 'check' command comes from the dev-container-features-test-lib.
-check "check uv version" uv --version
+check "check uv version"
+
+UV_PATH="${HOME}/.local/bin/uv"
+
+if [ -x "${UV_PATH}" ]; then
+    # shellcheck source=/dev/null
+    . "${UV_PATH}"
+    uv --version
+else
+    echo "uv is not installed"
+    exit 1
+fi
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.
