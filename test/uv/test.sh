@@ -36,6 +36,11 @@ check "check uv version"
 
 UV_ENV="${HOME}/.local/bin/env"
 
+echo "-------------"
+echo $HOME
+ls ${HOME}/.local/bin
+echo "-------------"
+
 if [ -x "${UV_ENV}" ]; then
     # shellcheck source=/dev/null
     . "${UV_ENV}"
