@@ -47,6 +47,7 @@ check "check uv version"
 UV_PATH="${HOME}/.local/bin/uv"
 
 if [ -x "${UV_PATH}" ]; then
+    # shellcheck source=/dev/null
     . "${UV_PATH}"
     uv --version
 else
