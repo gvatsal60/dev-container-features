@@ -1,14 +1,14 @@
 #!/bin/bash
 
 ##########################################################################################
-# File: uv_test
+# File: devcontainer_features_test.sh
 # Author: Vatsal Gupta
-# Date: 07-Sept-2025
+# Date: 27-Jul-2024
 # Description:
 # The 'test/_global' folder is a special test folder that is not tied to a single feature.
 #
 # This test file is executed against a running container constructed
-# from the value of 'uv' in the test/_global/scenarios.json file.
+# from the value of 'devcontainer_features_test' in the test/_global/scenarios.json file.
 #
 # The value of a scenarios element is any properties available in the 'devcontainer.json'.
 # Scenarios are useful for testing specific options in a feature, or to test a combination of features.
@@ -20,11 +20,11 @@
 ##########################################################################################
 # License
 ##########################################################################################
-# This script is licensed under the Apache 2.0 License.
+# This script is licensed under the MIT License.
 # License information should be updated as necessary.
 
 ##########################################################################################
-# Constants
+# Global Variables & Constants
 ##########################################################################################
 
 ##########################################################################################
@@ -42,18 +42,9 @@ set -e
 . dev-container-features-test-lib
 
 # The 'check' command comes from the dev-container-features-test-lib.
-check "check uv version"
-
-UV_PATH="${HOME}/.local/bin/uv"
-
-if [ -x "${UV_PATH}" ]; then
-    # shellcheck source=/dev/null
-    . "${UV_PATH}"
-    uv --version
-else
-    echo "uv is not installed"
-    exit 1
-fi
+check "check pre-commit version" pre-commit --version
+check "check node version" node --version
+check "check uv version" uv --version
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.
