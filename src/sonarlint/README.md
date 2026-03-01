@@ -11,16 +11,12 @@ SonarLint is a devcontainer feature that enables real-time feedback on code qual
 }
 ```
 
-
-
 ## Customizations
 
 ### VS Code Extensions
 
 - `SonarSource.sonarlint-vscode`
 - `usernamehw.errorlens`
-
-
 
 ---
 

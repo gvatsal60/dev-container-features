@@ -1,20 +1,10 @@
 {
-  "pre-commit_test": {
+  "devcontainer_features_test": {
     "features": {
-      "pre-commit": {}
-    },
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
-  },
-  "sonarlint_test": {
-    "features": {
-      "sonarlint": {}
-    },
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
-  },
-  "uv_test": {
-    "features": {
+      "pre-commit": {},
+      "sonarlint": {},
       "uv": {}
     },
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
+    "image": "ubuntu:noble"
   }
 }
