@@ -1,0 +1,19 @@
+name: markdown-lint
+permissions:
+  contents: read
+on:
+  pull_request:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+      - name: Markdown Lint
+        uses: DavidAnson/markdownlint-cli2-action@6b51ade7a9e4a75a7ad929842dd298a3804ebe8b
+        with:
+          fix: true
+          globs: |
+            *.md
+            !src/**/*.md
+            !test/**/*.md
