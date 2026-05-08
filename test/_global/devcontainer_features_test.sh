@@ -41,6 +41,8 @@ set -e
 # shellcheck source=/dev/null
 . dev-container-features-test-lib
 
+export PATH="${HOME}/.local/bin:${PATH}"
+
 # The 'check' command comes from the dev-container-features-test-lib.
 check "check pre-commit version" pre-commit --version
 check "check node version" node --version
