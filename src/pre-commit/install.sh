@@ -44,15 +44,13 @@ if command -v apt-get >/dev/null 2>&1; then
     fi
 fi
 
-if [ "${apt_install_succeeded}" = "true" ] || command -v pre-commit >/dev/null 2>&1; then
+if [ "${apt_install_succeeded}" = "true" ]; then
     exit 0
 fi
 
-if ! command -v pre-commit >/dev/null 2>&1; then
-    if command -v python3 >/dev/null 2>&1 && python3 -m pip --version >/dev/null 2>&1; then
-        python3 -m pip install pre-commit --break-system-packages
-    else
-        echo "pre-commit installation unsuccessful: python3 or pip not available, aborted!!!"
-        exit 1
-    fi
+if command -v python3 >/dev/null 2>&1 && python3 -m pip --version >/dev/null 2>&1; then
+    python3 -m pip install pre-commit --break-system-packages
+else
+    echo "pre-commit installation unsuccessful: python3 or pip not available, aborted!!!"
+    exit 1
 fi
