@@ -32,13 +32,13 @@ fi
 # Prefer distro package manager to avoid pip conflicts on externally-managed environments.
 if command -v apt-get >/dev/null 2>&1; then
     apt-get update
-    apt-get -y install --no-install-recommends pre-commit
+    apt-get -y install --no-install-recommends pre-commit || true
     rm -rf /var/lib/apt/lists/*
 fi
 
 if ! command -v pre-commit >/dev/null 2>&1; then
     if command -v python3 >/dev/null 2>&1 && command -v pip >/dev/null 2>&1; then
-        python3 -m pip install pre-commit --break-system-packages --ignore-installed
+        python3 -m pip install pre-commit --break-system-packages
     else
         echo "pre-commit installation unsuccessful, aborted!!!"
         exit 1
