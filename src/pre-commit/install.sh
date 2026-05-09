@@ -34,10 +34,8 @@ if command -v apt-get >/dev/null 2>&1; then
     apt-get update
     if ! apt-get -y install --no-install-recommends pre-commit; then
         echo "apt-get install pre-commit failed; falling back to pip installation."
-        rm -rf /var/lib/apt/lists/*
-    else
-        rm -rf /var/lib/apt/lists/*
     fi
+    rm -rf /var/lib/apt/lists/*
 fi
 
 if ! command -v pre-commit >/dev/null 2>&1; then
