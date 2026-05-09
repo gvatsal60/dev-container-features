@@ -25,23 +25,22 @@
 # Main Script
 ##########################################################################################
 
-# Check if python3 command is available
-if command -v python3 >/dev/null 2>&1; then
-    # Check if pip command is available
-    if command -v pip >/dev/null 2>&1; then
-        # Upgrade pip to the latest version
-        python3 -m pip install --upgrade pip
+if command -v pre-commit >/dev/null 2>&1; then
+    exit 0
+fi
 
-        # Install the pre-commit package using pip.
-        # The --break-system-packages option allows pip to install packages
-        # as it won't interfere with system packages.
-        python3 -m pip install pre-commit --break-system-packages
+# Prefer distro package manager to avoid pip conflicts on externally-managed environments.
+if command -v apt-get >/dev/null 2>&1; then
+    apt-get update
+    apt-get -y install --no-install-recommends pre-commit
+    rm -rf /var/lib/apt/lists/*
+fi
+
+if ! command -v pre-commit >/dev/null 2>&1; then
+    if command -v python3 >/dev/null 2>&1 && command -v pip >/dev/null 2>&1; then
+        python3 -m pip install pre-commit --break-system-packages --ignore-installed
     else
-        # If pre-commit is not available after installation, print an error message
-        echo "pip not available installation unsuccessful, aborted!!!"
+        echo "pre-commit installation unsuccessful, aborted!!!"
         exit 1
     fi
-else
-    echo "python3 not available installation unsuccessful, aborted!!!"
-    exit 1
 fi
