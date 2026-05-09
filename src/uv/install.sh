@@ -29,7 +29,7 @@ UV_INSTALL_URL="https://astral.sh/uv/install.sh"
 if ! command -v curl >/dev/null 2>&1 && ! command -v wget >/dev/null 2>&1; then
     if command -v apt-get >/dev/null 2>&1; then
         apt-get update
-        apt-get -y install --no-install-recommends curl
+        apt-get -y install --no-install-recommends ca-certificates curl
         rm -rf /var/lib/apt/lists/*
     else
         echo "curl/wget unavailable and apt-get not found, aborted!!!"
@@ -39,9 +39,17 @@ fi
 
 # Download and run installer script
 if command -v curl >/dev/null 2>&1; then
-    curl -LsSf "${UV_INSTALL_URL}" -o /tmp/uv-install.sh
+    if ! curl -LsSf "${UV_INSTALL_URL}" -o /tmp/uv-install.sh; then
+        rm -f /tmp/uv-install.sh
+        echo "uv installation unsuccessful, aborted!!!"
+        exit 1
+    fi
 elif command -v wget >/dev/null 2>&1; then
-    wget -qO /tmp/uv-install.sh "${UV_INSTALL_URL}"
+    if ! wget -qO /tmp/uv-install.sh "${UV_INSTALL_URL}"; then
+        rm -f /tmp/uv-install.sh
+        echo "uv installation unsuccessful, aborted!!!"
+        exit 1
+    fi
 else
     echo "uv installation unsuccessful, aborted!!!"
     exit 1
