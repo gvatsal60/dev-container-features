@@ -3,7 +3,6 @@
 ##########################################################################################
 # File: uv_test
 # Author: Vatsal Gupta
-# Date: 07-Sept-2025
 # Description:
 # The 'test/_global' folder is a special test folder that is not tied to a single feature.
 #
