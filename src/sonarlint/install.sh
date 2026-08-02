@@ -3,7 +3,6 @@
 ##########################################################################################
 # File: install.sh
 # Author: Vatsal Gupta
-# Date: 26-Jul-2024
 # Description: Installation script for `sonarlint` as devcontainer feature
 ##########################################################################################
 

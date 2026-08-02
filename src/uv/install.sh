@@ -3,7 +3,6 @@
 ##########################################################################################
 # File: install.sh
 # Author: Vatsal Gupta
-# Date: 06-Sept-2025
 # Description: Installation script for `uv` as devcontainer feature
 ##########################################################################################
 
