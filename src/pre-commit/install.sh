@@ -3,7 +3,6 @@
 ##########################################################################################
 # File: install.sh
 # Author: Vatsal Gupta
-# Date: 09-Jul-2024
 # Description: Installation script for `pre-commit` as devcontainer feature
 ##########################################################################################
 
