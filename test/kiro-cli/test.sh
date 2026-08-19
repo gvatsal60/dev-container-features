@@ -1,20 +1,20 @@
-#!/bin/sh
+#!/bin/bash
 
 ##########################################################################################
-# File: install.sh
+# File: test
 # Author: Vatsal Gupta
-# Description: Installation script for `uv` as devcontainer feature
+# Description: Test script for `kiro-cli` as devcontainer feature
 ##########################################################################################
 
 ##########################################################################################
 # License
 ##########################################################################################
 # This script is licensed under the Apache 2.0 License.
+# License information should be updated as necessary.
 
 ##########################################################################################
 # Constants
 ##########################################################################################
-UV_INSTALL_URL="https://astral.sh/uv/install.sh"
 
 ##########################################################################################
 # Functions
@@ -24,16 +24,15 @@ UV_INSTALL_URL="https://astral.sh/uv/install.sh"
 # Main Script
 ##########################################################################################
 
-set -o errexit
-set -o pipefail
-set -o nounset
+set -e
 
-# Check if curl command is available
-if command -v curl >/dev/null 2>&1; then
-    curl -LsSf "${UV_INSTALL_URL}" | sh
-elif command -v wget >/dev/null 2>&1; then
-    wget -qO- "${UV_INSTALL_URL}" | sh
-else
-    echo "uv installation unsuccessful, aborted!!!"
-    exit 1
-fi
+# Optional: Import test library bundled with the devcontainer CLI
+# shellcheck source=/dev/null
+. dev-container-features-test-lib
+
+# The 'check' command comes from the dev-container-features-test-lib.
+check "check kiro version" kiro --version
+
+# Report result
+# If any of the checks above exited with a non-zero exit code, the test will fail.
+reportResults

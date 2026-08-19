@@ -3,7 +3,7 @@
 ##########################################################################################
 # File: install.sh
 # Author: Vatsal Gupta
-# Description: Installation script for `uv` as devcontainer feature
+# Description: Installation script for `hermes-agent` as devcontainer feature
 ##########################################################################################
 
 ##########################################################################################
@@ -14,7 +14,7 @@
 ##########################################################################################
 # Constants
 ##########################################################################################
-UV_INSTALL_URL="https://astral.sh/uv/install.sh"
+INSTALL_URL="https://hermes-agent.nousresearch.com/install.sh"
 
 ##########################################################################################
 # Functions
@@ -28,12 +28,11 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-# Check if curl command is available
 if command -v curl >/dev/null 2>&1; then
-    curl -LsSf "${UV_INSTALL_URL}" | sh
+    curl -fsSL "${INSTALL_URL}" | bash
 elif command -v wget >/dev/null 2>&1; then
-    wget -qO- "${UV_INSTALL_URL}" | sh
+    wget -qO- "${INSTALL_URL}" | bash
 else
-    echo "uv installation unsuccessful, aborted!!!"
+    echo "hermes-agent installation unsuccessful, curl or wget is not installed. Aborted!!!"
     exit 1
 fi
