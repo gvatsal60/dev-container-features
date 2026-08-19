@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ##########################################################################################
 # File: install.sh
@@ -29,9 +29,9 @@ set -o pipefail
 set -o nounset
 
 if command -v curl >/dev/null 2>&1; then
-    curl -fsSL "${INSTALL_URL}" | sh
+    curl -fsSL "${INSTALL_URL}" | bash
 elif command -v wget >/dev/null 2>&1; then
-    wget -qO- "${INSTALL_URL}" | sh
+    wget -qO- "${INSTALL_URL}" | bash
 else
     echo "Installation unsuccessful, curl or wget is not installed. Aborted!!!"
     exit 1

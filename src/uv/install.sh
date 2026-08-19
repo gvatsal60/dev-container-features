@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ##########################################################################################
 # File: install.sh
@@ -30,9 +30,9 @@ set -o nounset
 
 # Check if curl command is available
 if command -v curl >/dev/null 2>&1; then
-    curl -fsSL "${UV_INSTALL_URL}" | sh
+    curl -fsSL "${UV_INSTALL_URL}" | bash
 elif command -v wget >/dev/null 2>&1; then
-    wget -qO- "${UV_INSTALL_URL}" | sh
+    wget -qO- "${UV_INSTALL_URL}" | bash
 else
     echo "Installation unsuccessful, curl or wget is not installed. Aborted!!!"
     exit 1
