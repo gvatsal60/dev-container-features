@@ -34,7 +34,7 @@ set -e
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
-check "check hermes-agent version" hermes-agent --version
+check "check hermes-agent version" hermes --version
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.

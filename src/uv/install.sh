@@ -30,10 +30,10 @@ set -o nounset
 
 # Check if curl command is available
 if command -v curl >/dev/null 2>&1; then
-    curl -LsSf "${UV_INSTALL_URL}" | sh
+    curl -fsSL "${UV_INSTALL_URL}" | sh
 elif command -v wget >/dev/null 2>&1; then
     wget -qO- "${UV_INSTALL_URL}" | sh
 else
-    echo "uv installation unsuccessful, aborted!!!"
+    echo "Installation unsuccessful, curl or wget is not installed. Aborted!!!"
     exit 1
 fi
