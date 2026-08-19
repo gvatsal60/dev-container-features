@@ -1,22 +1,4 @@
 {
-  "pre-commit_test": {
-    "features": {
-      "pre-commit": {}
-    },
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
-  },
-  "sonarlint_test": {
-    "features": {
-      "sonarlint": {}
-    },
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
-  },
-  "uv_test": {
-    "features": {
-      "uv": {}
-    },
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
-  },
   "hermes-agent_test": {
     "features": {
       "hermes-agent": {}
@@ -32,6 +14,24 @@
   "kiro-cli_test": {
     "features": {
       "kiro-cli": {}
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
+  },
+  "pre-commit_test": {
+    "features": {
+      "pre-commit": {}
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
+  },
+  "sonarlint_test": {
+    "features": {
+      "sonarlint": {}
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
+  },
+  "uv_test": {
+    "features": {
+      "uv": {}
     },
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
   }
