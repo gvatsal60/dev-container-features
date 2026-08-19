@@ -34,7 +34,7 @@ set -e
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
-check "check kiro version" kiro --version
+check "check kiro-cli version" kiro-cli --version
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.
