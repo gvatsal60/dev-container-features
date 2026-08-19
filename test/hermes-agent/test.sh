@@ -31,7 +31,8 @@ set -e
 . dev-container-features-test-lib
 
 # The 'check' command comes from the dev-container-features-test-lib.
-check "check hermes-agent version" hermes --version
+check "hermes binary is on PATH" which hermes
+check "check hermes-agent version" bash -c "hermes --version"
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.

@@ -30,6 +30,7 @@ set -e
 . dev-container-features-test-lib
 
 # The 'check' command comes from the dev-container-features-test-lib.
+check "node binary is on PATH" which node
 check "check node version" node --version
 
 # Report result
