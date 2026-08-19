@@ -31,7 +31,8 @@ set -e
 . dev-container-features-test-lib
 
 # The 'check' command comes from the dev-container-features-test-lib.
-check "check kilo version" kilo --version
+check "kilo binary is on PATH" which kilo
+check "check kilo version" bash -c "kilo --version"
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.

@@ -31,7 +31,8 @@ set -e
 . dev-container-features-test-lib
 
 # The 'check' command comes from the dev-container-features-test-lib.
-check "check kiro-cli version" kiro-cli --version
+check "kiro-cli binary is on PATH" which kiro-cli
+check "check kiro-cli version" bash -c "kiro-cli --version"
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.
