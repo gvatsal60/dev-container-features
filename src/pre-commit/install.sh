@@ -24,6 +24,10 @@
 # Main Script
 ##########################################################################################
 
+set -o errexit
+set -o pipefail
+set -o nounset
+
 # Check if python3 command is available
 if command -v python3 >/dev/null 2>&1; then
     # Check if pip command is available

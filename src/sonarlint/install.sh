@@ -23,4 +23,8 @@
 # Main Script
 ##########################################################################################
 
+set -o errexit
+set -o pipefail
+set -o nounset
+
 echo "SonarLint has been installed."
