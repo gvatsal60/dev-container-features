@@ -24,6 +24,10 @@ UV_INSTALL_URL="https://astral.sh/uv/install.sh"
 # Main Script
 ##########################################################################################
 
+set -o errexit
+set -o pipefail
+set -o nounset
+
 # Check if curl command is available
 if command -v curl >/dev/null 2>&1; then
     curl -LsSf "${UV_INSTALL_URL}" | sh

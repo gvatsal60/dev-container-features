@@ -1,0 +1,38 @@
+#!/bin/bash
+
+##########################################################################################
+# File: test
+# Author: Vatsal Gupta
+# Description: Test script for `kiro-cli` as devcontainer feature
+##########################################################################################
+
+##########################################################################################
+# License
+##########################################################################################
+# This script is licensed under the Apache 2.0 License.
+# License information should be updated as necessary.
+
+##########################################################################################
+# Constants
+##########################################################################################
+
+##########################################################################################
+# Functions
+##########################################################################################
+
+##########################################################################################
+# Main Script
+##########################################################################################
+
+set -e
+
+# Optional: Import test library bundled with the devcontainer CLI
+# shellcheck source=/dev/null
+. dev-container-features-test-lib
+
+# The 'check' command comes from the dev-container-features-test-lib.
+check "check kiro version" kiro --version
+
+# Report result
+# If any of the checks above exited with a non-zero exit code, the test will fail.
+reportResults
