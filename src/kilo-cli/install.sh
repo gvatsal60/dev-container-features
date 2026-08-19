@@ -29,10 +29,10 @@ set -o pipefail
 set -o nounset
 
 if command -v curl >/dev/null 2>&1; then
-    curl -fsSL "${INSTALL_URL}" | bash
+    curl -fsSL "${INSTALL_URL}" | sh
 elif command -v wget >/dev/null 2>&1; then
-    wget -qO- "${INSTALL_URL}" | bash
+    wget -qO- "${INSTALL_URL}" | sh
 else
-    echo "kilo-cli installation unsuccessful, curl or wget is not installed. Aborted!!!"
+    echo "Installation unsuccessful, curl or wget is not installed. Aborted!!!"
     exit 1
 fi
