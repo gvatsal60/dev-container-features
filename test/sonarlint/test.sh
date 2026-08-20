@@ -27,6 +27,17 @@ _source_rc_files() {
     done
 }
 
+_ensure_on_path() {
+    _bin_name="$1"
+    if command -v "$_bin_name" >/dev/null 2>&1; then
+        return 0
+    fi
+    _installed_bin="$(find "$HOME" -maxdepth 5 -name "$_bin_name" -type f -executable 2>/dev/null | head -1)"
+    if [[ -n "$_installed_bin" ]]; then
+        export PATH="$(dirname "$_installed_bin"):$PATH"
+    fi
+}
+
 ##########################################################################################
 # Main Script
 ##########################################################################################
@@ -37,6 +48,7 @@ set -e
 . dev-container-features-test-lib
 
 _source_rc_files
+_ensure_on_path node
 
 # The 'check' command comes from the dev-container-features-test-lib.
 check "node binary is on PATH" which node
