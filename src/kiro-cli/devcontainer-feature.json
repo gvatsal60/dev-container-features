@@ -1,0 +1,7 @@
+{
+  "description": "Kiro CLI is a devcontainer feature that provides seamless integration with the Kiro command-line interface. It enables developers to run Kiro commands directly within their development container, facilitating efficient project management and deployment workflows.",
+  "documentationURL": "http://github.com/gvatsal60/dev-container-features/tree/HEAD/src/kiro-cli",
+  "id": "kiro-cli",
+  "name": "Kiro CLI",
+  "version": "1.0.0"
+}
