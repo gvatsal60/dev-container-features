@@ -19,6 +19,14 @@
 ##########################################################################################
 # Functions
 ##########################################################################################
+_source_rc_files() {
+    for _rc_file in "$HOME/.bashrc" "$HOME/.profile" "$HOME/.zshrc"; do
+        if [ -f "$_rc_file" ]; then
+            # shellcheck source=/dev/null
+            . "$_rc_file" 2>/dev/null || true
+        fi
+    done
+}
 
 ##########################################################################################
 # Main Script
@@ -26,9 +34,10 @@
 
 set -e
 
-# Optional: Import test library bundled with the devcontainer CLI
 # shellcheck source=/dev/null
 . dev-container-features-test-lib
+
+_source_rc_files
 
 # The 'check' command comes from the dev-container-features-test-lib.
 check "kiro-cli binary is on PATH" which kiro-cli
