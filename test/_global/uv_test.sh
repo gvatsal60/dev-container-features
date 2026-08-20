@@ -45,7 +45,7 @@ _ensure_on_path() {
     fi
     _installed_bin="$(find "$HOME" -maxdepth 5 -name "$_bin_name" -type f -executable 2>/dev/null | head -1)"
     if [[ -n "$_installed_bin" ]]; then
-        export PATH="$(dirname "$_installed_bin"):$PATH"
+        ln -sf "$_installed_bin" "/usr/local/bin/$_bin_name"
     fi
 }
 
