@@ -22,7 +22,7 @@ INSTALL_URL="https://hermes-agent.nousresearch.com/install.sh"
 
 # Generic function to link binaries from user install locations to /usr/local/bin
 _link_user_binaries() {
-    local user_home_dirs=("/root" "/home/vscode" "/home/codespace" "/home/gitpod")
+    local user_home_dirs=("/root" "/home/vscode" "/home/codespace" "/home/gitpod" "${HOME}")
     local bin_dirs=(".local/bin" "bin")
 
     for user_home in "${user_home_dirs[@]}"; do
