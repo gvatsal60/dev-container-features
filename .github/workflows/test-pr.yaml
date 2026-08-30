@@ -14,6 +14,11 @@ jobs:
         with:
           filters: |
             pre-commit: ./**/pre-commit/**
+            sonarlint: ./**/sonarlint/**
+            uv: ./**/uv/**
+            hermes-agent: ./**/hermes-agent/**
+            kilo-cli: ./**/kilo-cli/**
+            kiro-cli: ./**/kiro-cli/**
   test:
     needs: [detect-changes]
     runs-on: ubuntu-latest
