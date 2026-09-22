@@ -1,0 +1,8 @@
+{
+  "test": {
+    "features": {
+      "kiro-cli": {}
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:latest"
+  }
+}

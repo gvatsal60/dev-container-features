@@ -19,6 +19,25 @@
 ##########################################################################################
 # Functions
 ##########################################################################################
+_source_rc_files() {
+    for _rc_file in "$HOME/.bashrc" "$HOME/.profile" "$HOME/.zshrc"; do
+        if [ -f "$_rc_file" ]; then
+            # shellcheck source=/dev/null
+            . "$_rc_file" 2>/dev/null || true
+        fi
+    done
+}
+
+_ensure_on_path() {
+    _bin_name="$1"
+    if command -v "$_bin_name" >/dev/null 2>&1; then
+        return 0
+    fi
+    _installed_bin="$(find "$HOME" -maxdepth 5 -name "$_bin_name" -type f -executable 2>/dev/null | head -1)"
+    if [[ -n "$_installed_bin" ]]; then
+        ln -sf "$_installed_bin" "/usr/local/bin/$_bin_name"
+    fi
+}
 
 ##########################################################################################
 # Main Script
@@ -26,12 +45,15 @@
 
 set -e
 
-# Optional: Import test library bundled with the devcontainer CLI
 # shellcheck source=/dev/null
 . dev-container-features-test-lib
 
+_source_rc_files
+_ensure_on_path pre-commit
+
 # The 'check' command comes from the dev-container-features-test-lib.
-check "check pre-commit version" pre-commit --version
+check "pre-commit binary is on PATH" which pre-commit
+check "check pre-commit version" bash -c "pre-commit --version"
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.

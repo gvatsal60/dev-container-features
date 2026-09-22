@@ -1,0 +1,8 @@
+{
+  "test": {
+    "features": {
+      "hermes-agent": {}
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:latest"
+  }
+}
