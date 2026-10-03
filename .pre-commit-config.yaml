@@ -37,7 +37,7 @@ repos:
       - id: trailing-whitespace
   # shfmt hook for formatting shell scripts
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.13.1-1
+    rev: v3.14.1-1
     hooks:
       - id: shfmt
         name: shfmt
@@ -45,7 +45,7 @@ repos:
         args: ['-i', '4']
   # ShellCheck hook for linting shell scripts
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: "v0.11.0.1"
+    rev: "v0.11.0.1-1"
     hooks:
       - id: shellcheck
         name: shellcheck
@@ -93,7 +93,7 @@ repos:
         entry: cmd --githook pre-commit
   # Markdownlint for linting Markdown files
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.23.2
+    rev: v0.23.3
     hooks:
       - id: markdownlint-cli2
         args: [--fix]
