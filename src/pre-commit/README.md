@@ -11,6 +11,10 @@ The pre-commit hooks as VSCode's DevContainer feature automates pre-commit check
 }
 ```
 
+
+
+
+
 ---
 
 _Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/gvatsal60/dev-container-features/blob/main/src/pre-commit/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
