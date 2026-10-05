@@ -1,0 +1,14 @@
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "kilocode.kilo-code"
+      ]
+    }
+  },
+  "description": "Kilo CLI is a devcontainer feature that provides seamless integration with the Kilo command-line interface. It enables developers to run Kilo commands directly within their development container, facilitating efficient project management and deployment workflows.",
+  "documentationURL": "http://github.com/gvatsal60/dev-container-features/tree/HEAD/src/kilo-cli",
+  "id": "kilo-cli",
+  "name": "Kilo CLI",
+  "version": "1.0.0"
+}
