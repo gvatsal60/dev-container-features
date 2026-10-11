@@ -11,15 +11,11 @@ UV as a devcontainer feature that enables dependency management, virtual environ
 }
 ```
 
-
-
 ## Customizations
 
 ### VS Code Extensions
 
 - `charliermarsh.ruff`
-
-
 
 ---
 
