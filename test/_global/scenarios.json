@@ -1,4 +1,22 @@
 {
+  "hermes-agent_test": {
+    "features": {
+      "hermes-agent": {}
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
+  },
+  "kilo-cli_test": {
+    "features": {
+      "kilo-cli": {}
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
+  },
+  "kiro-cli_test": {
+    "features": {
+      "kiro-cli": {}
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
+  },
   "pre-commit_test": {
     "features": {
       "pre-commit": {}
